@@ -48,15 +48,8 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
 	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom", // or "rss", "json"
-		outputPath: "/feed/feed.xml",
-		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4
-			}
-		},
+		type: "json", // or "rss", "xml"
+		outputPath: "/feed/feed.json",
 		collection: {
 			name: "posts",
 			limit: 10,
@@ -65,7 +58,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "Blog Title",
 			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
+			base: "https://suesmith.github.io/eleventy-base-blog",
 			author: {
 				name: "Your Name"
 			}
