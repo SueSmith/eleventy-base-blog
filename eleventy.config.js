@@ -50,6 +50,12 @@ export default async function(eleventyConfig) {
 	eleventyConfig.addPlugin(feedPlugin, {
 		type: "json", // or "rss", "xml"
 		outputPath: "/feed/feed.json",
+		templateData: {
+ 			eleventyNavigation: {
+  			key: "Feed",
+				order: 4
+			}
+		},
 		collection: {
 			name: "posts",
 			limit: 10,
@@ -61,12 +67,6 @@ export default async function(eleventyConfig) {
 			base: "https://suesmith.github.io/eleventy-base-blog",
 			author: {
 				name: "Your Name"
-			}
-		},
-		templateData: {
-			eleventyNavigation: {
-  			key: "Feed",
-				order: 4
 			}
 		}
 	});
