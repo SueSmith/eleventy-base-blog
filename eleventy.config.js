@@ -64,7 +64,7 @@ export default async function(eleventyConfig) {
 			language: "en",
 			title: "My Amazing Blog",
 			subtitle: "Wait until you read all the things I post about",
-			base: "https://suesmith.github.io/eleventy-base-blog",
+			base: "https://suesmith.github.io/",
 			author: {
 				name: "Your Name"
 			}
