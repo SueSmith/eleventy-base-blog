@@ -3,6 +3,7 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy";
 
 import pluginFilters from "./_config/filters.js";
 
@@ -144,5 +145,6 @@ export const config = {
 	// it will transform any absolute URLs in your HTML to include this
 	// folder name and does **not** affect where things go in the output folder.
 
-	 pathPrefix: "/eleventy-base-blog/",
+	pathPrefix: "/eleventy-base-blog/",
+	eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 };
