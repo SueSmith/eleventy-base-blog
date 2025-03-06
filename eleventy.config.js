@@ -62,6 +62,12 @@ export default async function(eleventyConfig) {
 			author: {
 				name: "Your Name"
 			}
+		},
+		templateData: {
+			eleventyNavigation: {
+  			key: "Feed",
+				order: 4
+			}
 		}
 	});
 
